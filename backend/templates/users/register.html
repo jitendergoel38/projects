@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+SignUp Now
+{% endblock %}
+
+{% block content %}
+
+
+<form method="post">
+    <h3>New User Sign Up</h3>
+    {% csrf_token %} 
+   {{ form.as_p }}
+
+    <button type="submit">Submit</button>
+    <!-- <input type="button" value=""> -->
+    <!-- <div class="social">
+      <div class="go"><i class="fab fa-google"></i>  Google</div>
+      <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+    </div> -->
+    <a href="{% url 'users:login' %}" >SignIn here!</a>
+</form>
+
+
+{% endblock %}
