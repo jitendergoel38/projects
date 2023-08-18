@@ -23,5 +23,6 @@ urlpatterns = [
     path('u/',include('users.urls',namespace='users')),
     path('snip/',include('snippets.urls',namespace='snippets')),
     path('test/',include('testing.urls',namespace='testing')),
+    path('tu/',include('textutils.urls' ,namespace='textutils')),
     # path('api/',)
 ]
