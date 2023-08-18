@@ -11,10 +11,9 @@ from django.contrib.auth import login, authenticate, logout
 class UserRegistrationView(CreateView):
     template_name = 'users/register.html'
     form_class = UserCreationForm
-    success_url = reverse_lazy('home:homepage')
+    success_url = reverse_lazy('users:login')
     def form_valid(self,form):
         response = super().form_valid(form)
-        login(self.request,self.object)
         return response
     
 class UserLoginView(LoginView):
